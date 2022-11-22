@@ -1,0 +1,99 @@
+.tm-block-col {
+  margin-bottom: 30px;
+}
+.tm-block {
+  padding: 40px;
+  min-height: 350px;
+  height: 100%;
+  max-height: 450px;
+  border-radius:20px;
+}
+.tm-block-avatar,
+.tm-block-settings {
+  max-height: none;
+}
+.tm-block-avatar {
+  height: auto;
+}
+.tm-block-h-auto {
+  min-height: 1px;
+  max-height: none;
+  height: auto;
+}
+.tm-block-scroll {
+  overflow-y: scroll;
+}
+.tm-block-overflow {
+  overflow: hidden;
+}
+.tm-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+
+.table {
+  background-color: #ffffff;
+  color: #0d0d0d;
+  font-size: 60%;
+  //*border: solid #c1c1c1 1px;*//
+  border-radius:20px;
+}
+thead {
+  background-color: #03071e;
+  color: #fff;
+}
+.table thead th {
+  border-bottom: 0;
+}
+
+.table td,
+.table th {
+  
+  padding: 15px 25px;
+  vertical-align: middle;
+
+}
+
+
+/*estilo para caja de tabla*/
+.tm-bg-primary-dark {
+  background-color: rgba(32,33,33,0.5);
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b8;
+}
+
+
+@media (max-width: 1199px) {
+  .tm-col-big,
+  .tm-col-small {
+    width: 49.65%;
+  }
+  
+@media (max-width: 991px) {
+  .tm-col-big,
+  .tm-col-small {
+    width: 100%;
+    min-height: 383px;
+    height: auto;
+  }
+  .tm-block {
+    padding: 30px;
+  }
+}
+

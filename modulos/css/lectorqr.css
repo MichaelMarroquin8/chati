@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    overflow-x: hidden;
+    min-width: 100%;
+    width: 100% !important;
+}
+
+
+
+.contenedor_camara{
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+#loadingMessage {
+      text-align: center;
+      padding: 40px;
+      background-color: #f1f1f1;
+}
+
+#canvas {
+  width: 100%;
+}
+
+#output {
+  margin-top: 20px;
+  background: #eee;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+#output div {
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+
+#output span {
+  color:red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#noQRFound {
+  text-align: center;
+}
+.h4_visitantes{
+  text-align: center;
+  color:#1cb39b;
+  font-weight: bold;
+}
+.bg_lightgrey{
+  background-color: lightgrey;
+}

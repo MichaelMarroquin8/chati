@@ -1,0 +1,145 @@
+ .botonhr{
+    text-decoration: none;
+	max-width:70px;
+	min-width:70px;
+    height:70px;
+    text-align:center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #111217;
+    background-color: #ffffff;
+    border-radius:20px;
+	display:table-cell;
+	vertical-align:middle;
+	-webkit-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	
+  }
+  
+  .bajar{
+	position: relative;
+    top:30px;
+	text-align:center;
+  }
+  
+   .bajartw{
+	position: relative;
+    top:10px;
+	text-align:center;
+	fill:#ffffff;
+
+  }
+  
+  
+  .botonhr:hover{
+    color: #ff7800;
+    background-color: #f5f5f5;
+    text-decoration: none;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+/**Sector Público**/
+
+ .botonhrtw{
+    text-decoration: none;
+	max-width:70px;
+	min-width:70px;
+    height:70px;
+    text-align:center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #111217;
+    background-color: #ffffff;
+    border-radius:20px;
+	display:table-cell;
+	vertical-align:middle;
+	-webkit-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);
+	
+  }
+  
+  .bajartr{
+	position: relative;
+    top:40px;
+	text-align:center;
+  }
+  
+   .bajartwtw{
+	position: relative;
+    top:20px;
+	text-align:center;
+	fill:#ffffff;
+
+  }
+  
+  
+  .botonhrtw:hover{
+    color: #ff7800;
+    background-color: #f5f5f5;
+    text-decoration: none;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+ .botonhract{
+    text-decoration: none;
+	max-width:70px;
+	min-width:70px;
+    height:50px;
+    text-align:center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #ff7800;
+    background-color: #11101d;
+    border-radius:20px;
+	display:table-cell;
+	vertical-align:middle;
+	/*-webkit-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	/*-moz-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	/*box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	
+  }
+  
+  
+.cajanro{
+    text-decoration: none;
+	width:140px;
+    height:80px;
+    text-align:center;
+    font-weight: 600;
+    font-size: 15px;
+    color: #111217;
+    background-color: #ffffff;
+    border-radius:10px;
+	border:#cdcdcd 1px solid;
+	margin:20px;
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	display:inline-block;
+	/*-webkit-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	/*-moz-box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	/*box-shadow: 0px 0px 23px -13px rgba(0,0,0,0.75);*/
+	
+  }

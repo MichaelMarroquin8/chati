@@ -1,0 +1,22 @@
+.columnatw {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+}
+
+.columnatw {
+	width: 50%;
+	padding: 10px 60px;
+	float: left;
+}
+
+.columnatw:nth-child(2) {
+	box-shadow: -1px 0 0 transparent;
+}
+
+.columnatw p {
+	font-weight: 300;
+	font-size: 1.500em;
+	text-align: center;
+	line-height: 1.5;
+}

@@ -1,0 +1,239 @@
+.kaltw{
+	background-color: #ffffff;
+    width:100px;
+    height:95px;
+	border-radius:0px;
+	-webkit-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.21);
+	-moz-box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.21);
+	box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.21);
+	
+	display:table-cell;
+	vertical-align:middle;
+	border-radius:20px;
+	margin:10px;
+
+}
+
+.ajuste{
+	width:105%;
+	position: relative;
+    top:10px;
+	text-align:center;
+
+}
+
+.cuadrotr{
+	
+	border-radius:20px;
+	padding:10px;
+	
+	display:table-cell;
+	vertical-align:middle;
+	
+	background:transparent;
+
+	position: relative;
+	width: 100%;
+	
+
+}
+
+label{
+	font-size: 1em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+	color: #130430;
+
+}
+
+.contenido input,
+.contenido textarea,
+.contenido select {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 1.2em;
+	padding: 1px 10px;
+	color: #130430;
+	display:block;
+	background: transparent;
+	width:100%;
+}
+
+.contenido input,
+.contenido textarea {
+	border: 2px solid #e6e6e6;
+	border-radius: 10px;
+}
+
+
+.contenido input:focus,
+.contenido textarea:focus,
+.contenido label:active + input,
+.contenido label:active + textarea {
+	outline: none;
+	border: 2px solid #100745;
+	border-radius: 10px;
+}
+
+.contenido select:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #100745;
+    font-style: calibri;
+}
+
+:-moz-placeholder {
+    color: #100745;
+    font-style: calibri;
+}
+
+::-moz-placeholder {
+    color: #100745;
+    font-style: calibri;
+}
+
+:-ms-input-placeholder {
+    color: #100745;
+    font-style: calibri;
+}
+
+.registrate{
+	text-align: center;
+	padding-top: 40px;
+	clear: both;
+}
+
+
+button .md-close{
+	background: #222222;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+button .md-close:hover {
+	background: #000000;
+}
+.md-close{
+	background: #222222;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+.md-close:hover {
+	background: #000000;
+}
+
+
+.este{
+	background: #ffffff;
+	border: none;
+	color: #000;
+	width: auto;
+	cursor: pointer;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	border-radius:20px;
+}
+
+.este:hover {
+	background: #051227;
+	color:#ffffff;
+}
+
+
+.contenido input.md-trigger {
+	background: #130843;
+	background: linear-gradient(#130843, #090420);
+	background: -moz-linear-gradient(#130843, #090420);
+	background: -webkit-linear-gradient(#130843, #090420);
+	background: -o-linear-gradient(#130843, #090420);
+	border: none;
+	color: #ffffff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 1em;
+	border-radius: 10px;
+	letter-spacing: 1px;
+}
+.contenido input.md-trigger:hover {
+	background: #090420;
+	background: linear-gradient(#090420, #130843);
+	background: -moz-linear-gradient(#090420, #130843);
+	background: -webkit-linear-gradient(#090420, #130843);
+	background: -o-linear-gradient(#090420, #130843);
+}
+
+.contenido input.boton:hover {
+	background: #000000;
+}
+.codrops-top {
+	background: #ffffff;
+	text-transform: uppercase;
+	position: relative;
+	width: 100%;
+	font-size: 0.7em;
+	
+}
+
+@media screen and (max-width: 70em) {
+	.columna {
+		width: 50%;
+	}
+	.columna:nth-child(3) {
+		width: 100%;
+	}
+	
+	.columnatw {
+		width: 50%;
+	}
+	.columnatw:nth-child(3) {
+		width: 100%;
+	}
+.contenido input,
+.contenido textarea,
+.contenido select {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 1.4em;
+	padding: 5px 10px;
+	color: #100745;
+	width: 100%;
+	background: transparent;
+}
+}
+
+@media screen and (max-width: 48em) {
+	.columna {
+		width: 100%;
+		padding: 10px;
+	}
+	.columnatw {
+		width: 100%;
+		padding: 10px;
+	}
+}
