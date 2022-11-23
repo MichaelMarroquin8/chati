@@ -64,7 +64,7 @@
 	  					<input type="password" id="pasusuario" name="pasusuario" required placeholder="Contraseña:">
 						<br>
 					<input class="md-trigger" type="submit" value="Ingresar" id="btn_inicia"/>
-	 <h4 style="font-size:15px;text-align:left;"><font color="#130430"><a href=""><b>¿Olvidaste tu usuario o contraseña?</b></a><br><br>
+	 <h4 style="font-size:15px;text-align:left;"><font color="#130430"><a href="../recuperar.php"><b>¿Olvidaste tu usuario o contraseña?</b></a><br><br>
 			¿No te has registrado? <br><a href="../perfil.php"><b>Quiero registrarme</b></a></h4>
 			
 			</div>

@@ -23,6 +23,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/haldol8.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/letra.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/load.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	</head>
 
 	<body>
@@ -46,7 +47,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 			<div class="botonesinicio">
 
 				<center>
-					<form action="iniciosesion/login.php" method="POST" class="contenido">
+					<form action="iniciosesion/cambiarc.php" method="POST" class="contenido">
 						<input type="hidden" id="uno" name="uno" value="uno" />
 						<div class="menu">
 							<br>
@@ -60,7 +61,19 @@ if (isset($_SESSION['privilegio_nombre'])) {
 									<h4>
 										<font color="#130430">Recuperar contraseña</font>
 									</h4>
-
+									<?php
+										if (isset($_GET["message"])) {
+											switch ($_GET["message"]) {
+												case "not_found";
+										?>
+													<div class="alert alert-warning" role="alert">
+														El correo electronico no existe!<br>registrate.
+													</div>
+												<?php
+													break;
+											}
+										}
+										?>
 
 									<input type="email" id="usuario_nom" name="usuario_nom" placeholder="Correo electrónico:" required autocomplete="off" />
 									<br>

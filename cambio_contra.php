@@ -23,8 +23,6 @@ if (isset($_SESSION['privilegio_nombre'])) {
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/haldol8.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/letra.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/load.css" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-	</head>
 	</head>
 
 	<body>
@@ -48,7 +46,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 			<div class="botonesinicio">
 
 				<center>
-					<form action="iniciosesion/cambiarc.php" method="POST" class="contenido">
+					<form action="iniciosesion/validarc.php" method="POST" class="contenido">
 						<input type="hidden" id="uno" name="uno" value="uno" />
 						<div class="menu">
 							<br>
@@ -60,43 +58,25 @@ if (isset($_SESSION['privilegio_nombre'])) {
 									<img src="iniciosesion/imagenes/kallgris.png" width="200px">
 
 									<h4>
-										<font color="#130430">Iniciar Sesión</font>
+										<font color="#130430">Recuperar tu contraseña</font>
 									</h4>
-										<?php
-										if (isset($_GET["message"])) {
-											switch ($_GET["message"]) {
-												case "ok";
-										?>
-													<div class="alert alert-primary" role="alert">
-														Todo correcto, revisa tu correo electronico
-													</div>
-												<?php
-													break;
 
-												case "error";
-												?>
-													<div class="alert alert-danger" role="alert">
-														Ocurrio un error inesperado, intententa de nuevo por favor
-													</div>
-										<?php
-													break;
-											}
-										}
-										?>
-									<input type="email" id="usuario_nom" name="usuario_nom" placeholder="Correo electrónico:" required autocomplete="off" />
+									<input type="text" name="id" value="<?php echo $_GET['id'];?>">
+
+									<input type="email" id="usu_pass" name="usu_pass" placeholder="Nueva contraseña:" required autocomplete="off" />
 									<br>
-									<input type="password" id="pasusuario" name="pasusuario" required placeholder="Contraseña:">
+
+									<input type="email" id="usu_pass2" name="usu_pass2" placeholder="Repita contraseña:" required autocomplete="off" />
 									<br>
-									<input class="md-trigger" type="submit" value="Ingresar" id="btn_inicia" />
-									<h4 style="font-size:15px;text-align:left;">
-										<font color="#130430"><a href="recuperar.php"><b>¿Olvidaste tu usuario o contraseña?</b></a><br><br>
-											¿No te has registrado? <br><a href="perfil.php"><b>Quiero registrarme</b></a>
-									</h4>
+
+									<input class="md-trigger" type="submit" value="Enviar" id="btn_inicia" /><br>
+
+									¿No te has registrado? <br><a href="perfil.php"><b>Quiero registrarme</b></a></h4>
 
 								</div>
 							</div>
 
-
+							
 
 					</form>
 				</center>
