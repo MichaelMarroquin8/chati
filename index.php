@@ -48,7 +48,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 			<div class="botonesinicio">
 
 				<center>
-					<form action="iniciosesion/cambiarc.php" method="POST" class="contenido">
+					<form action="iniciosesion/login.php" method="POST" class="contenido">
 						<input type="hidden" id="uno" name="uno" value="uno" />
 						<div class="menu">
 							<br>
@@ -62,27 +62,35 @@ if (isset($_SESSION['privilegio_nombre'])) {
 									<h4>
 										<font color="#130430">Iniciar Sesión</font>
 									</h4>
-										<?php
-										if (isset($_GET["message"])) {
-											switch ($_GET["message"]) {
-												case "ok";
-										?>
-													<div class="alert alert-primary" role="alert">
-														Todo correcto, revisa tu correo electronico
-													</div>
-												<?php
-													break;
+									<?php
+									if (isset($_GET["message"])) {
+										switch ($_GET["message"]) {
+											case "ok";
+									?>
+												<div class="alert alert-primary" role="alert">
+													Todo correcto, revisa tu correo electronico
+												</div>
+											<?php
+												break;
 
-												case "error";
-												?>
-													<div class="alert alert-danger" role="alert">
-														Ocurrio un error inesperado, intententa de nuevo por favor
-													</div>
-										<?php
-													break;
-											}
+											case "success";
+											?>
+												<div class="alert alert-success	" role="alert">
+													Se ha cambiado su contraseña correctamente!!
+												</div>
+											<?php
+												break;
+
+											case "error";
+											?>
+												<div class="alert alert-danger" role="alert">
+													Ocurrio un error inesperado, intententa de nuevo por favor
+												</div>
+									<?php
+												break;
 										}
-										?>
+									}
+									?>
 									<input type="email" id="usuario_nom" name="usuario_nom" placeholder="Correo electrónico:" required autocomplete="off" />
 									<br>
 									<input type="password" id="pasusuario" name="pasusuario" required placeholder="Contraseña:">

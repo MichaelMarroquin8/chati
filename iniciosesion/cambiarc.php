@@ -20,7 +20,7 @@ $ok = mysqli_query($con, $sql);
 $privilegio = mysqli_fetch_assoc($ok);
 
 if ($privilegio['estatus']!="") {
-
+    $_SESSION['emailusuario']= $privilegio['emailusuario'];
     $mail = new PHPMailer(true);
 
     try {
@@ -29,14 +29,13 @@ if ($privilegio['estatus']!="") {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'm.stivenmarroquin@gmail.com';
-        $mail->Password   = 'wlqvisuiryrybgor';
+        $mail->Password   = 'xndkwqxzuprkxlaq';
         $mail->SMTPSecure = 'tls';          
         $mail->Port       = 587;
 
         //Recipients
         //Recipients
-        $mail->setFrom('m.stivenmarroquin@gmail.com', 'Mailer');
-        $mail->addAddress('m.stivenmarroquin@gmail.com', 'Joe User');     //Add a recipient
+        $mail->addAddress($_SESSION['emailusuario']);     //Add a recipient
 
         //Content
         $mail->isHTML(true);
@@ -44,7 +43,7 @@ if ($privilegio['estatus']!="") {
         $mail->Body    = 'Hola, usted ha solicitado un cambio de contraseña, por favor ingrese al siguiente link para realizarlo <a href="localhost/chati/cambio_contra.php?id='.$privilegio['idusuario'].'">pulse aqui</a>';
 
         $mail->send();
-        header("Location: ../index.php?message=ok");
+        header("Location: ../recuperar.php?message=ok");
     } catch (Exception $e) {
         header("Location: ../index.php?message=error");
     }

@@ -23,6 +23,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/haldol8.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/letra.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/load.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	</head>
 
 	<body>
@@ -61,12 +62,25 @@ if (isset($_SESSION['privilegio_nombre'])) {
 										<font color="#130430">Recuperar tu contraseña</font>
 									</h4>
 
-									<input type="text" name="id" value="<?php echo $_GET['id'];?>">
+									<?php
+									if (isset($_GET["message"])) {
+										switch ($_GET["message"]) {
+											case "error";
+									?>
+												<div class="alert alert-danger" role="alert">
+													Las contraseñas no coinciden
+												</div>
+									<?php
+												break;
+										}
+									}
+									?>
+									<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 
-									<input type="email" id="usu_pass" name="usu_pass" placeholder="Nueva contraseña:" required autocomplete="off" />
+									<input type="password" id="usu_pass" name="usu_pass" placeholder="Nueva contraseña:" required autocomplete="off" />
 									<br>
 
-									<input type="email" id="usu_pass2" name="usu_pass2" placeholder="Repita contraseña:" required autocomplete="off" />
+									<input type="password" id="usu_pass2" name="usu_pass2" placeholder="Repita contraseña:" required autocomplete="off" />
 									<br>
 
 									<input class="md-trigger" type="submit" value="Enviar" id="btn_inicia" /><br>
@@ -76,7 +90,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 								</div>
 							</div>
 
-							
+
 
 					</form>
 				</center>

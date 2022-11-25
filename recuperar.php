@@ -62,18 +62,27 @@ if (isset($_SESSION['privilegio_nombre'])) {
 										<font color="#130430">Recuperar contraseña</font>
 									</h4>
 									<?php
-										if (isset($_GET["message"])) {
-											switch ($_GET["message"]) {
-												case "not_found";
-										?>
-													<div class="alert alert-warning" role="alert">
-														El correo electronico no existe!<br>registrate.
-													</div>
-												<?php
-													break;
-											}
+									if (isset($_GET["message"])) {
+										switch ($_GET["message"]) {
+
+											case "ok";
+									?>
+												<div class="alert alert-primary" role="alert">
+													Todo correcto, revisa tu correo electronico
+												</div>
+											<?php
+												break;
+												
+											case "not_found";
+											?>
+												<div class="alert alert-warning" role="alert">
+													El correo electronico no existe!<br>registrate.
+												</div>
+									<?php
+												break;
 										}
-										?>
+									}
+									?>
 
 									<input type="email" id="usuario_nom" name="usuario_nom" placeholder="Correo electrónico:" required autocomplete="off" />
 									<br>

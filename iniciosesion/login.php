@@ -37,6 +37,6 @@ if($privilegio['estatus']!="")
 {
 		
 	echo "<script>alert('Oops! Datos incorrectos, por favor intenta nuevamente')
-	       window.location='index.php';</script>";	
+	       window.location='../index.php';</script>";	
 }
 ?>
