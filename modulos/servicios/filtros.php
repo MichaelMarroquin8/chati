@@ -1,54 +1,50 @@
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-salud"><img class="bajartw" src="imagenes/uno.png" width="100%"></a><div >Salud.</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-construccion"><img class="bajartw" src="imagenes/dos.png" width="100%"></a><div >Construcción</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-tecnologia"><img class="bajartw" src="imagenes/tres.png" width="100%"></a><div >Tecnologia</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-educacion"><img class="bajartw" src="imagenes/cuatro.png" width="100%"></a><div >Educación</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-alimentos"><img class="bajartw" src="imagenes/cinco.png" width="100%"></a>
+        <div >Alimentos.</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-super-m"><img class="bajartw" src="imagenes/seis.png" width="100%"></a><div >Super mercado</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-automotriz"><img class="bajartw" src="imagenes/uno.png" width="100%"></a><div >Automotriz</div>
+    </div>
+</li>
 
-
-
-<div style="padding:10px;display:inline-block;">
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/uno.png" width="50%"><span class="bajar">Retail.</span></a> 
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/dos.png" width="50%"><span class="bajar">Solidario</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/tres.png" width="50%"><span class="bajar">Educación</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/cuatro.png" width="50%"><span class="bajar">Salud.</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/cinco.png" width="50%"><span class="bajar">Financiero</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhrtw" href="#"><img class="bajartwtw" src="imagenes/seis.png" width="50%"><span class="bajartr">Sector Público</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/uno.png" width="50%"><span class="bajar">Construcción</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/dos.png" width="50%"><span class="bajar">Automotriz</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/tres.png" width="50%"><span class="bajar">Fundaciones</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/cuatro.png" width="50%"><span class="bajar">Turismo</span></a>	
-</div>
-
-<div style="padding:10px;display:inline-block;">	
-<a class="botonhr" href="#"><img class="bajartw" src="imagenes/cinco.png" width="50%"><span class="bajar">Industria</span></a>	
-</div>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhr" href="#section-comunicacion"><img class="bajartw" src="imagenes/cinco.png" width="100%"></a><div >Comunicación</div>
+    </div>
+</li>
+<li>
+    <div style="padding:10px;display:inline-block;">
+        <a class="botonhrtw" href="#section-Industria"><img class="bajartw" src="imagenes/seis.png" width="100%"></a><div >Industria</div>
+    </div>
+</li>
 
 
 <br>
-
-
-
-
-

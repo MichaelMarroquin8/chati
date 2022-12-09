@@ -59,11 +59,11 @@ $QueryMsjs = mysqli_query($con, $Msjs);
                       echo $UserMsjs['message'];
                  }elseif ($extension_arch == "webm") { ?>
                    <audio src="<?php echo $archivo; ?>" controls="controls" type="audio/mpeg" preload="preload"></audio>
-                <?php } else{ ?>
+                <?php } elseif ($extension_arch == "csv"){ ?>
                     <img src="<?php echo 'archivos/'.$archivo; ?>" style="width: 100%; max-width: 250px;">
                   <div class="row">
                     <div class="col-md-12">
-                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen" >Descargar
+                      <a class="csone" img="assets/sobresalir.png" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen" >Descargar
                       </a>
                     </div>
                   </div>

@@ -13,7 +13,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Iniciar Sesión | Chati</title>
+		<title>Verificar | Chati</title>
 		<link rel="shortcut icon" href="iniciosesion/imagenes/favicon.png">
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/estiloa.css" />
 		<link rel="stylesheet" type="text/css" href="iniciosesion/css/fondo.css" />
@@ -47,7 +47,7 @@ if (isset($_SESSION['privilegio_nombre'])) {
 			<div class="botonesinicio">
 
 				<center>
-					<form action="iniciosesion/cambiarc.php" method="POST" class="contenido">
+					<form action="iniciosesion/verificar.php" method="POST" class="contenido">
 						<input type="hidden" id="uno" name="uno" value="uno" />
 						<div class="menu">
 							<br>
@@ -59,35 +59,13 @@ if (isset($_SESSION['privilegio_nombre'])) {
 									<img src="iniciosesion/imagenes/kallgris.png" width="200px">
 									<div>
 										<h4 style="font-size:25px;">
-											<font color="#130430"><a href="index.php"><img src="iniciosesion/imagenes/flecha.svg" width="20px" style="vertical-align: middle;"></a><b>Recuperar   contraseña</b></font>
+											<font color="#130430"><a href="index.php"><img src="iniciosesion/imagenes/flecha.svg" width="20px" style="vertical-align: middle;"></a><b>Verificar usuario</b></font>
 										</h4>
 										<h4>
 										</h4>
 									</div>
-									<?php
-									if (isset($_GET["message"])) {
-										switch ($_GET["message"]) {
 
-											case "ok";
-									?>
-												<div class="alert alert-primary" role="alert">
-													Todo correcto, revisa tu correo electronico
-												</div>
-											<?php
-												break;
-
-											case "not_found";
-											?>
-												<div class="alert alert-warning" role="alert">
-													El correo electronico no existe!<br>registrate.
-												</div>
-									<?php
-												break;
-										}
-									}
-									?>
-
-									<input type="email" id="usuario_nom" name="usuario_nom" placeholder="Correo electrónico:" required autocomplete="off" />
+									<input type="text" id="codigo" name="codigo" placeholder="Codigo de verificarión:" required autocomplete="off" />
 									<br>
 
 									<input class="md-trigger" type="submit" value="Enviar" id="btn_inicia" /><br>
