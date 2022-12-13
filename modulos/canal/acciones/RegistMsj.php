@@ -106,4 +106,3 @@ $result = $api_request->send_curl($apikey, $secret, $uri, $method, $data);
 
   include('../MsjsUsers.php');
 	}
-?>

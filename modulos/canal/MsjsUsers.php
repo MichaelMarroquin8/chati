@@ -72,8 +72,49 @@ if (isset($_SESSION['emailusuario']) != "") {
                   echo $UserMsjs['message'];
                 } elseif ($extension_arch == "webm") { ?>
                   <audio src="<?php echo $archivo; ?>" controls="controls" type="audio/mpeg" preload="preload"></audio>
-                <?php } else { ?>
-                  <img src="<?php echo 'archivos/' . $archivo; ?>" style="width: 100%; max-width: 250px;">
+
+                <?php } elseif ($extension_arch == "csv" or $extension_arch == "xlsx" or $extension_arch == "xlsm" or $extension_arch == "xltx") { ?>
+                  <img src="assets/img/xls.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "pdf") { ?>
+                  <img src="assets/img/pdf.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "docx"  or $extension_arch == "docm"  or $extension_arch == "dotx"  or $extension_arch == "dotm" or $extension_arch == "doc") { ?>
+                  <img src="assets/img/docx.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "pptx"  or $extension_arch == "ppsx"   or $extension_arch == "potx"   or $extension_arch == "sldx" ) { ?>
+                  <img src="assets/img/ppt.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "txt") { ?>
+                  <img src="assets/img/txt.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "jpg" or $extension_arch == "gif" or $extension_arch == "png") { ?>
+                  <img src="<?php echo 'archivos/' . $archivo; ?>" style="width: 100%; max-width: 200px;"><br>
                   <div class="row">
                     <div class="col-md-12">
                       <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
@@ -94,20 +135,66 @@ if (isset($_SESSION['emailusuario']) != "") {
             <div class="receiver">
               <div class="message-text">
                 <?php
-                if (!empty($UserMsjs['message'])) {
-                ?>
-                  <?php echo $UserMsjs['message']; ?>
-                <?php
+                if ($UserMsjs['message'] != "") {
+                  echo $UserMsjs['message'];
                 } elseif ($extension_arch == "webm") { ?>
-                  <audio src="<?php echo $archivo; ?>" controls="controls" type="audio/mpeg" preload="preload"></audio>
-                <?php } else { ?>
-                  <img src="<?php echo 'archivos/' . $UserMsjs['archivos']; ?>" style="width: 100%; max-width: 250px;">
+                  <audio src="./<?php echo $archivo; ?>" controls="controls" type="audio/mpeg" preload="preload"></audio>
+                  <?php } elseif ($extension_arch == "csv" or $extension_arch == "xlsx") { ?>
+                  <img src="assets/img/xls.png" style="width: 100%; max-width: 100px;"><br>
                   <div class="row">
                     <div class="col-md-12">
                       <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
                       </a>
                     </div>
                   </div>
+                <?php } elseif ($extension_arch == "pdf") { ?>
+                  <img src="assets/img/pdf.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                  <?php } elseif ($extension_arch == "docx") { ?>
+                  <img src="assets/img/docx.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                  <?php } elseif ($extension_arch == "pptx") { ?>
+                  <img src="assets/img/ppt.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                  <?php } elseif ($extension_arch == "rtf" or $extension_arch == "txt") { ?>
+                  <img src="assets/img/txt.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                <?php } elseif ($extension_arch == "jpg" or $extension_arch == "gif" or $extension_arch == "png") { ?>
+                  <img src="<?php echo 'archivos/'.$archivo; ?>" style="width: 100%; max-width: 200px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>
+                  <?php } elseif ($extension_arch == "zip" or $extension_arch == "rar") { ?>
+                  <img src="assets/img/codigo-postal.png" style="width: 100%; max-width: 100px;"><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a class="csone" download="" href="archivos/<?php echo $archivo; ?>" title="Descargar Imagen">Descargar
+                      </a>
+                    </div>
+                  </div>  
                 <?php } ?>
               </div>
               <span class="message-time pull-right">

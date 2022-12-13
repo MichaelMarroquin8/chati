@@ -81,13 +81,10 @@ if (isset($_SESSION['emailusuario']) != "") {
     <!----contenedor del chat--->
     <div class="col-sm-8 conversation">
       <div id="capausermsj">
-
         <img src="assets/img/ani.png" id="capawelcome"  width="200px" />
       </div>
     </div>
     <!---fin--->
-	
-
   </div>
 </div>
 
