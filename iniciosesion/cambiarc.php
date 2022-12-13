@@ -6,37 +6,41 @@ include("../modulos/conex/conn.php");
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $cod = substr(str_shuffle($permitted_chars), 0, 10);
 
-$uno = $_POST['uno'];
-
 $usuario_nom = $_POST['usuario_nom'];
 
 $sql = ("SELECT * FROM usuarios WHERE usuario_nom='$usuario_nom'");
 $ok = mysqli_query($con, $sql);
 $privilegio = mysqli_fetch_assoc($ok);
 
-if($usuario_nom['usuario_nom'] = $privilegio['emailusuario'])
-    {
-        include("api_request.php");
-        $apikey = "49-5850-60f8a9dc148543.86336207";
-        //$secret = "c1d8bea78804334451b64e528ffdf804c88dd0db";
-        $secret = "c7264c5348b03f027a144c58ee50595d7b41f5c1";
-        $uri = "https://aio.sigmamovil.com/api/mail/newsinglemail";
-        $method = "POST";
+if ($usuario_nom['usuario_nom'] = $privilegio['emailusuario']) {
+    $id = $privilegio['idusuario'];
+    $nombre_comple=$privilegio['nombre_comple'];
+    $apellidos=$privilegio['apellidos'];
 
-        $data = json_encode(array(
-            "mail" => array(
-                "name" => "cambio_contraseñora_chati.$cod",
-                "category" => array("10125"),
-                "subject" => "EMAIL",
-                "sender" => "sigmamovil@sigmamovil.com/Verificacion",
-                "replyto" => "sigmamovil@sigmamovil.com",
-                "scheduleDate" => "now",
-                "to" => $usuario_nom
-            ),
+    $sql1 = "update usuarios set recuperar='$cod' where idusuario='$id'";
+    $resultado = mysqli_query($conexion, $sql1);
+    
 
-            "content" => array(
-                "type" => "html",
-                "content" => '
+    include("api_request.php");
+    $apikey = "49-5850-60f8a9dc148543.86336207";
+    $secret = "c7264c5348b03f027a144c58ee50595d7b41f5c1";
+    $uri = "https://aio.sigmamovil.com/api/mail/newsinglemail";
+    $method = "POST";
+
+    $data = json_encode(array(
+        "mail" => array(
+            "name" => "cambio_contraseñora_chati.$cod",
+            "category" => array("10125"),
+            "subject" => "EMAIL",
+            "sender" => "sigmamovil@sigmamovil.com/ Cambiar contraseña",
+            "replyto" => "sigmamovil@sigmamovil.com",
+            "scheduleDate" => "now",
+            "to" => $usuario_nom
+        ),
+
+        "content" => array(
+            "type" => "html",
+            "content" => '
                 <style type="text/css">
                 /*! Email Template */
                 .ni-emails-fill:before {
@@ -393,43 +397,21 @@ if($usuario_nom['usuario_nom'] = $privilegio['emailusuario'])
                         </td>
                     </tr>
                     <tr>
-                        <td class="px-3 px-sm-5 pt-3 pt-sm-5 pb-3">
-                            <h2 class="email-heading text-success">Bienvenido a CHATI !!
-                            </h2>
-                        </td>
-                    </tr>
-                    <tr>
                         <td class="px-3 px-sm-5">
-                            <p>Hola,</p>
-                            <p>Es un placer para nosotros que te unas a nuestros programa.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-                            <p class="email-note">A treves de esta plataforma podras interactuar con las diferentes empresas asociadas a nuestro programa</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-                            <p class="email-note">Antes de iniciar por favor verifica tu identidad: </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-3 px-sm-5 pt-3 pt-sm-5 pb-3">
-                            <h2 class="email-heading text-success">
-                            </h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-                            <p class="email-note">ingresa el codigo de seguridad en el siguiente link.</p>
+                            <p>Hola ' . $nombre_comple . '&nbsp;' . $apellidos . ',</p>
+                            <p>Solicitaste un cambio de contraseña <br> Por favor ingresa al siguiente link para realizar el cambio de contraseña</p>
                         </td>
                     </tr>
                     <tr>
                         <td class="px-3 px-sm-5 pb-2">
-                            <a href="localhost/chati/cambio_contra.php?id='.$privilegio['idusuario'].'">pulse aqui</a>
+                            <a class="email-btn" href="localhost/chati/cambio_contra.php?id=' . $cod . '">Cambiar contraseña</a>
                         </td>
                         <br>
+                    </tr>
+                    <tr>
+                        <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
+                            <p class="email-note">Si no fuiste tu quien solicito el cambio de contraseña has caso omiso a este correo. </p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -448,28 +430,21 @@ if($usuario_nom['usuario_nom'] = $privilegio['emailusuario'])
         </td>
     </tr>
 </table>'
-            )
-        ));
+        )
+    ));
 
-        $api_request = new api_request();
-        $result = $api_request->send_curl(
-            $apikey,
-            $secret,
-            $uri,
-            $method,
-            base64_encode($data)
-        );
-        echo "<pre>Respuesta:<br>";
-        print_r(json_decode($result, true));
-        echo "</pre>";
+    $api_request = new api_request();
+    $result = $api_request->send_curl(
+        $apikey,
+        $secret,
+        $uri,
+        $method,
+        base64_encode($data)
+    );
 
-        header("Location: ../recuperar.php?message=ok");
-    } 
-    elseif($usuario_nom['usuario_nom'] != $privilegio['emailusuario'])
-    {
-        header("Location: ../recuperar.php?message=not_found");
-    }
-     else 
-    {
-        header("Location: ../index.php?message=error");
-    }
+    header("Location: ../recuperar.php?message=ok");
+} elseif ($usuario_nom['usuario_nom'] != $privilegio['emailusuario']) {
+    header("Location: ../recuperar.php?message=not_found");
+} else {
+    header("Location: ../index.php?message=error");
+}

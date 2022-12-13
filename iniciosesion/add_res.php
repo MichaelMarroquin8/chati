@@ -424,17 +424,18 @@
                         <tr>
                             <td class="px-3 px-sm-5">
                                 <p>Hola '. $nombre_comple . '&nbsp;' . $apellidos. ',</p>
-                                <p>Es un placer para nosotros que te unas a nuestros programa.</p>
+                                <p>Estamos felices de que te unas a nuestra plataforma.</p>
                             </td>
                         </tr>
                         <tr>
                             <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-								<p class="email-note">A treves de esta plataforma podras interactuar con las diferentes empresas asociadas a nuestro programa</p>
+								<p class="email-note">A partir de este momento, podrás interactuar con diferentes empresas asociadas a este canal.</p>
                             </td>
                         </tr>
 						<tr>
 							<td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-								<p class="email-note">Antes de iniciar por favor verifica tu identidad: </p>
+								<p class="email-note">Para iniciar, necesitamos verificar tu identidad:
+								</p>
 							</td>
 						</tr>
 						<tr>
@@ -445,7 +446,7 @@
                         </tr>
 						<tr>
 							<td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
-								<p class="email-note">ingresa el codigo de seguridad en el siguiente link.</p>
+								<p class="email-note">ingresa el código de seguridad en el siguiente link.</p>
 							</td>
 						</tr>
                         <tr>

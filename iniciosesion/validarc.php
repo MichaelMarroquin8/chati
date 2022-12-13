@@ -12,7 +12,7 @@ if ($usuario_pass == $usuario_pass2) {
 
 	header("Location: ../index.php?message=success");
 
-	$sql1="UPDATE usuarios set pasusuario= '$usuario_pass' WHERE idusuario= $id";
+	$sql1="UPDATE usuarios set pasusuario='$usuario_pass' WHERE recuperar='$id'";
 	$conexion->query($sql1);
 	
 } else {
